@@ -1,0 +1,163 @@
+{%  extends '::base.html.twig' %}
+{% block title %}{{ parent() }}
+{% endblock %}
+
+{% block stylesheets %}{{ parent() }}
+{% endblock %}
+
+{% block body %}{{ parent() }}
+
+    <a name="top"></a>
+    <div class="main">
+        <div class="filters">
+            <section class="formulaires">
+                <div class="wrapper">
+                    <h3>Un titre, un titre et un titre</h3>
+                    <div class="border_bottom"></div>
+
+                    <div class="formulaire">
+                        <article class="main-content-1">
+                            <article class="main-content form-filters">
+
+                                <h4>Détails réservation</h4>
+
+                                <div class="form-group">
+                                    <label>Ville de départ :</label>
+                                    <input type="text" value="" class="input-control" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Start date :</label>
+                                    <input type="text"  value="" class="input-control" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label>End date :</label>
+                                    <input type="text"  value="" class="input-control" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Km :</label>
+                                    <input type="text"  value="" class="input-control" />
+                                </div>
+
+                                <h4>Filtres</h4>
+
+                                <div class="form-group">
+                                    <label>Voitures :</label>
+                                    <div class="civi">
+                                        <label class="radio">
+                                            <input class="radio1" type="radio" name="radios" checked>
+                                            <span class="outer">
+														<span class="inner"></span>
+													</span>Compact
+                                        </label>
+                                        <label class="radio">
+                                            <input class="radio2" type="radio" name="radios">
+                                            <span class="outer">
+														<span class="inner"></span>
+													</span>Citadine
+                                        </label>
+                                        <label class="radio">
+                                            <input class="radio3" type="radio" name="radios">
+                                            <span class="outer">
+														<span class="inner"></span>
+													</span>Berline
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Scooters :</label>
+                                    <div class="civi">
+                                        <label class="radio">
+                                            <input class="radio1" type="radio" name="radios" checked>
+                                            <span class="outer">
+														<span class="inner"></span>
+													</span>EQ. 125CC
+                                        </label>
+                                        <label class="radio">
+                                            <input class="radio2" type="radio" name="radios">
+                                            <span class="outer">
+														<span class="inner"></span>
+													</span>EQ. 50CC
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="btn_mid"><button class="btn_w"> <a href="">Filtrer</a> </button></div>
+                                </div>
+
+                            </article>
+
+                            <article class="main-content card-filters">
+
+                              {% for t in TabVehicule %}
+                                <h4>Nous avons trouvé 2 offres</h4>
+
+                                <aticle class="veh">
+                                    <div class="car_img">
+                                        <img src="{{ asset( t.image ) }}" class="images">
+                                    </div>
+                                    <div class="veh_text">
+                                        <div class="container_1">
+                                            <h1>
+                                                <span>2017 </span><span>{{ t.marque }}</span>
+                                            </h1>
+                                            <div class="container_stars">
+                                                <fieldset class="rating">
+                                                    <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+                                                    <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+                                                    <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+                                                    <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+                                                    <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+                                                    <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+                                                    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+                                                    <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+                                                    <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+                                                    <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+
+                                        <div class="container_2">
+                                            <div class="price_time">
+                                                <div class="price">
+                                                    {{ t.prix_achat }}
+                                                </div>
+                                                <div class="time">Heure</div>
+                                            </div>
+                                            <div class="price_time">
+                                                <div class="price">{{ t.prix_achat * 24 }}</div>
+                                                <div class="time">Jour</div>
+                                            </div>
+                                            <div class="price_time">
+                                                <div class="price">{{ t.prix_achat * 720 }}</div>
+                                                <div class="time">Mois</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="container_3">
+                                            <div class="btn_mid"><button class="btn_w"> <a href="payment.html">Réserver</a> </button></div>
+                                        </div>
+                                    </div>
+                                </aticle>
+
+                              {% endfor %}
+                            </article>
+
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}{{ parent() }}
+{% endblock %}
+
+{% block footer %}{{ parent() }}
+{% endblock %}
