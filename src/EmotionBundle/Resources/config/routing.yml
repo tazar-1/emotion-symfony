@@ -1,0 +1,23 @@
+setVehicule:
+    path: /addvehicule
+    defaults: { _controller: EmotionBundle:Default:InsertVehicule }
+
+updateVehicule:
+    path: /updvehicule/{id}
+    defaults: { _controller: EmotionBundle:Default:UpdateVehicule }
+
+Vehicules:
+    path: /cars
+    defaults: { _controller: EmotionBundle:Default:PageVehicule }
+
+filtervehicule:
+    path: /filters/{param}/{param2}/{param3}/{param4}
+    defaults: { _controller: EmotionBundle:Default:Filters }
+
+about_us:
+    path: /about_us
+    defaults: { _controller: EmotionBundle:Default:Presentation }
+
+setLocation:
+    path: /addlocation
+    defaults: { _controller: EmotionBundle:Default:InsertLocation }

@@ -1,0 +1,24 @@
+{%  extends '::base.html.twig' %}
+{% block title %}{{ parent() }}
+{% endblock %}
+
+{% block stylesheets %}{{ parent() }}
+{% endblock %}
+
+{% block body %}{{ parent() }}
+
+	{{ form_start(form) }}
+    {{ form_errors(form) }}
+
+    {{ form_row(form) }}
+    <input type="submit" value="envoie" />
+{{ form_end(form) }}
+
+
+{% endblock %}
+
+{% block javascripts %}{{ parent() }}
+{% endblock %}
+
+{% block footer %}{{ parent() }}
+{% endblock %}

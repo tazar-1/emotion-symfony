@@ -1,0 +1,325 @@
+.locations
+    line-height: 0
+
+    .section_white
+        padding: $box-pad*3 $box-pad/2 $box-pad*2 $box-pad/2
+        @media screen and (max-width: $break-sm)
+            padding: $box-pad/2
+        &:last-child
+            padding: 0 $box-pad/2 $box-pad/2 $box-pad/2
+            @media screen and (max-width: $break-sm)
+                padding: $box-pad/2
+
+    .diagonale
+        background: linear-gradient(to right top, $white 50%, $turquoise 50%)
+
+    .table_loc
+        table
+            width: 100%
+            thead
+                font-weight: 600
+                tr
+                    border-bottom: 1px solid $gray-light-2
+                    .arrow
+                        width: $box-pad/2
+                th
+                    padding: $box-pad/1.5 $box-pad/2.5
+                    @media screen and (max-width: $break-sm)
+                        &:last-child
+                            display: none
+                @media screen and (max-width: $break-sm)
+                    // display: flex
+                    // flex-direction: row
+                    // flex-wrap: wrap
+                    display: none
+            tbody
+                tr
+                    border-bottom: 1px solid $gray-light-2
+                    .arrow
+                        width: $box-pad/2
+                        @media screen and (max-width: $break-sm)
+                            display: none
+                    @media screen and (max-width: $break-sm)
+                        .pipe
+                            display: none
+                .trip-expand__origin
+                    cursor: pointer
+                td
+                    padding: $box-pad/1.5 $box-pad/2.5
+                @media screen and (max-width: $break-sm)
+                    .no_visible
+                        display: none
+                .hard
+                    border-bottom: none
+                    background: #fafafa
+                    td
+                        padding: 0
+                    // box-shadow: inset 0 -4px 2px -3px rgba(0,0,0,.1), inset 0 3px 2px -3px rgba(0,0,0,.1)
+                    .trip-expand
+                        padding: 28px
+                        @media screen and (max-width: $break-sm)
+                            padding: 0
+                        .flexbox
+                            display: flex
+                            width: 100%
+                            flex-direction: row
+                            justify-content: center
+                            align-items: center
+                            @media screen and (max-width: $break-sm)
+                                flex-direction: column
+                            .flexbox__item
+                    .one-third
+                        width: 33.333%
+                        @media screen and (max-width: $break-sm)
+                            width: 100%
+                            padding: $box-pad/2 0
+                        &:nth-child(2)
+                            border-right: 1px solid $gray-light-2
+                            border-left: 1px solid $gray-light-2
+                            @media screen and (max-width: $break-sm)
+                                border: 0
+                        .border_bottom
+                            width: 90%
+                            height: 1px
+                            background-color: $gray-light-2
+                            margin: $box-pad*1.2 auto
+                        .container_d_h_a
+                            flex-direction: column
+                            .date_heure_adress
+                                line-height: 1.5
+                                margin-bottom: $box-pad/2
+                                h7
+                                    color: $gray_header
+                                    text-transform: uppercase
+                                    margin-bottom: 10px
+                                h5
+                                h6
+                                .btn_mid
+                                    margin: $box-pad/2 auto $box-pad auto
+                                    width: 100%
+                                    // &:last-child
+                                    //     margin-bottom: 0
+                                    .btn_w
+                                        height: $box-pad+5px
+                                        font-size: $box-pad/2
+                                        padding: 0px $box-pad/2
+                                        background-color: transparent
+                                        border: solid 1px $turquoise
+                                        color: $turquoise
+                                        @media screen and (max-width: $break-sm)
+                                            margin-bottom: $box-pad/2
+                                        &:hover
+                                            border: solid 1px $turquoise
+                                            background-color: $turquoise
+                                            color: $white
+                            .container_details
+                                display: flex
+                                flex-direction: row
+                                justify-content: space-around
+                                // .details
+                                //     display: flex
+                                //     flex-direction: row
+                                //     align-items: center
+                                //     width: 50%
+                                //     //border-bottom: 1px solid rgba($white, 0.5)
+                                //     padding: 0 $box-pad
+                                //
+                                //     > div
+                                //         margin: 0 auto
+                                .details
+                                    padding: 0 $box-pad
+                                    display: flex
+                                    flex-direction: row
+                                    justify-content: space-around
+                                    .ico
+                                        height: $box-pad+5px
+                                        width: $box-pad+5px
+                                        //background-color: $white
+                                    .timer_e
+                                        background-size: $box-pad+10 $box-pad+10
+                                        background-position: -3px -2px
+                                        background-repeat: no-repeat
+                                        margin-right: $box-pad/2
+                                    .timer_e
+                                        background-image: url(../images/icons/timer_e.svg)
+                                    .calendar_e
+                                        background-image: url(../images/icons/calendar_e.svg)
+                                    .d_text
+                                        color: $black
+                                        text-transform: uppercase
+                                        line-height: 2
+                                        text-align: left
+                                    // .ico
+                                    //     margin: 0 $box-pad/2
+                                    //     //height: $box-pad/1.5
+                                    //     ////background-color: $black
+                                    // //.gear_lever_e
+                                    //     background-image: url(../images/icons/gear_lever_e.svg)
+                                    //     background-size: $box-pad/1.5 $box-pad/1.5
+                                    //
+                                    //
+                                    // .boite_vitess
+                                    //
+                                    // .calendar
+                                    // .d_text
+                                    //     text-transform: uppercase
+                                    //     line-height: 1.3
+                                    //     text-align: left
+                        .container_n_s_v
+                            // border-left: 800px solid transparent
+                            // /* border-right: 0px solid transparent; */
+                            // border-bottom: 40px solid $turquoise
+                            z-index: 3
+                            h1
+                                //font-family: 'Montserrat', sans-serif
+                                margin-top: $box-pad/1.5
+                                font-size: $box-pad/1.5
+                                font-weight: 800
+                                @media screen and (max-width: $break-sm)
+                                    font-size: $box-pad/1.5
+
+                                span
+                                    &:first-child
+                                        color: $turquoise
+                                        padding-right: 5px
+                                    &:last-child
+                                        color: $sapin
+                                        padding-left: 5px
+                            //h1
+                                margin-top: $box-pad/1.5
+                                font-size: $box-pad/1.5
+                                @media screen and (max-width: $break-sm)
+                                    font-size: $box-pad/2+1px
+                            .container_stars
+                                margin: $box-pad*1.5 auto $box-pad/1.5 auto
+                                @media screen and (max-width: $break-sm)
+                                    margin: $box-pad auto $box-pad/1.5 auto
+                                @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css)
+
+                                /****** Style Star Rating Widget *****/
+
+                                .rating
+                                    border: none
+                                    width: 50%
+                                    width: 150px
+                                    margin: 0 auto
+
+                                    input
+                                        display: none
+                                    label:before
+                                        margin: 5px
+                                        font-size: 1.25em
+                                        font-family: FontAwesome
+                                        display: inline-block
+                                        content: "\f005"
+                                    .half:before
+                                        content: "\f089"
+                                        position: absolute
+                                    label
+                                        color: #ddd
+                                        float: right
+
+                                /***** CSS Magic to Highlight Stars on Hover *****/
+
+                                .rating > input:checked ~ label, .rating:not(:checked) > label:hover, .rating:not(:checked) > label:hover ~ label
+                                    color: #FFD700
+
+                                .rating > input:checked + label:hover, .rating > input:checked ~ label:hover, .rating > label:hover ~ input:checked ~ label, .rating > input:checked ~ label:hover ~ label
+                                    color: #FFED85
+
+                                //.stars
+                                    height: 40px
+
+
+
+                            .images
+                                width: 100%
+                        .container_d_d
+                            position: relative
+                            //top: -$box-pad*3
+                            z-index: 1
+                            .wave
+                                -ms-transform: rotate(180deg)
+                                -webkit-transform: rotate(180deg)
+                                transform: rotate(180deg)
+                                //@include rotate(180deg)
+                            //.diagonale
+                                background: linear-gradient(to right bottom, transparent 50%, $turquoise 50%)
+                                height: $box-pad*2
+                            .container_details
+                                background-color: $turquoise
+                                margin-top: -1px
+                                .details
+                                    border-bottom: 1px solid rgba($white, 0.5)
+                                    padding: $box-pad/2 $box-pad/1.5
+                                    display: flex
+                                    flex-direction: row
+                                    justify-content: space-around
+                                    @media screen and (max-width: $break-sm)
+                                        padding: $box-pad/2 0
+                                    .ico
+                                        height: $box-pad+5px
+                                        width: $box-pad+5px
+                                        //background-color: $white
+                                    .gear_lever_e, .calendar_e, .timer_e
+                                        background-size: $box-pad+10 $box-pad+10
+                                        background-position: -3px -2px
+                                        background-repeat: no-repeat
+                                    .gear_lever_e
+                                        background-image: url(../images/icons/gear_lever_e.svg)
+                                    .calendar_e
+                                        background-image: url(../images/icons/calendar_e.svg)
+
+                                    .border_line
+                                        width: 30%
+                                        height: 1px
+                                        background: $white
+                                        margin-top: $box-pad/2
+                                    .d_text
+                                        width: 25%
+                                        color: $white
+                                        text-transform: uppercase
+                                        line-height: 1.9
+                                        text-align: left
+                                        font-size: 18px
+                                        @media screen and (max-width: $break-sm)
+                                            width: 35%
+
+                        &:last-child
+                            iframe
+                                width: 100%
+                            .btn_mid
+                                margin: $box-pad auto
+                                width: 100%
+                                // &:last-child
+                                //     margin-bottom: 0
+                                .btn_w
+                                    display: flex
+                                    flex-direction: row
+                                    //height: $box-pad+10px
+                                    font-size: $box-pad/1.5
+                                    padding: 0
+                                    //padding: $box-pad/2
+                                    background-color: $turquoise
+                                    border: solid 1px $turquoise
+                                    color: $white
+                                    @media screen and (max-width: $break-sm)
+                                        width: auto
+                                        margin-bottom: $box-pad/2
+                                    &:hover
+                                        border: solid 1px $turquoise
+                                        background-color: $turquoise
+                                        color: $white
+
+                                    .ico
+                                        height: $box-pad+5px
+                                        width: $box-pad+5px
+                                        //background-color: $white
+                                    .png_e
+                                        background-size: $box-pad+10 $box-pad+10
+                                        background-position: -3px -2px
+                                        background-repeat: no-repeat
+                                        margin: 5px $box-pad/2
+                                        background-image: url(../images/icons/png_e.svg)
+                                    a
+                                        padding: 10px $box-pad/2 10px 0px
