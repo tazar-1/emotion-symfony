@@ -7,7 +7,6 @@
 
 {% block body %}{{ parent() }}
 
-    <a name="top"></a>
     <div class="main">
         <div class="landings">
             <section class="header">
@@ -45,7 +44,7 @@
                     <div class="voit_scoot">
                         <h3>Le véhicule que vous souhaitez :</h3>
                         <ul>
-                            <li class="dropdown" class="voitures">
+                            <li class="dropdown voitures">
                                 <a href="javascript:void(0)" class="dropbtn"><img src="{{ asset('framework/images/voiture-accueil.png') }}" alt="BLIBLABLU" class="image">
                                     <div class="overlay">
                                         <!-- <div class="text">Voitures</div> -->
@@ -56,7 +55,7 @@
                                     <a href="#">Link 3</a>
                                 </div>
                             </li>
-                            <li class="dropdown" class="scooters">
+                            <li class="dropdown scooters">
                                 <a href="javascript:void(0)" class="dropbtn"><img src="{{ asset('framework/images/scooter-accueil.png') }}" alt="BLIBLABLU" class="image">
                                     <div class="overlay">
                                         <!-- <div class="text">Scooters</div> -->
@@ -101,8 +100,6 @@
             </section>
         </div>
 
-
-    </div>
 {% endblock %}
 
 {% block javascripts %}{{ parent() }}
