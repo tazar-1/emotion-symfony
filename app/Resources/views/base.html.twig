@@ -9,15 +9,25 @@
             <meta property=“og:title” content=“eMotion”>
             <meta property=“og:type” content=“website”>
             <meta property=“og:url” content=“http://emotion.com“>
+
             <link rel="icon" type="image/x-icon" href="{{ asset('framework/images/favicon.ico') }}" />
+
             <link rel="stylesheet" href="{{ asset('framework/css/styles.css') }}" type="text/css" media="all"/>
-            <link rel="stylesheet" href="{{ asset('framework/bootstrap/css/bootstrap.css') }}" type="text/css" media="all"/>
+
+            <script type="text/javascript" href="{{ asset('framework/js/jquery.js') }}"></script>
+
+            <script type="text/javascript"  href="{{ asset('framework/js/scroll.js') }}"></script>
+            <script type="text/javascript"  href="{{ asset('framework/js/nav_menu.js') }}"></script>
+            <script type="text/javascript"  href="{{ asset('framework/js/animation.js') }}"></script>
+
+    		<script type="text/javascript"  href="{{ asset('framework/js/app.js') }}"></script>
+
         {% endblock %}
 
     </head>
     <body>
         {% block body %}
-            <div class="navi">
+            <div id="nav">
                 <header class="header container">
                     <div class="logo"></div>
                     <nav class="top-nav">
@@ -31,12 +41,30 @@
                                 {% else %}
                                     <li><a href="{{ path('fos_user_security_login') }}" class="btn-log">Connexion</a></li>
                             {%endif%}
-
-
                         </ul>
                     </nav>
                 </header>
             </div>
+            <div id="container-menu">
+    				<div id="toto" class="navToggle" onClick="appendClass()">
+    					<div class="icon"></div>
+    				</div>
+    				<div id="back-menu">
+    					<div id="menu">
+    						<ul>
+                                <li><a href="{{ path('home') }}" class="btn-border">Accueil</a></li>
+                                <li><a href="{{ path('about_us') }}" class="btn-border">Présentation</a></li>
+                                <li><a href="{{ path('Vehicules') }}" class="btn-border">Véhicules</a></li>
+                                {% if is_granted("IS_AUTHENTICATED_FULLY") %}
+                                    <li><a href="{{ path('fos_user_profile_show') }}" class="btn-border">Mon compte</a></li>
+                                    <li><a href="{{ path('fos_user_security_logout') }}" class="btn-log">Déconnexion</a></li>
+                                    {% else %}
+                                        <li><a href="{{ path('fos_user_security_login') }}" class="btn-log">Connexion</a></li>
+                                {%endif%}
+    						</ul>
+    					</div>
+    				</div>
+    		</div>
         {% endblock %}
         {% block javascripts %}{% endblock %}
     </body>

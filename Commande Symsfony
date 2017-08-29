@@ -1,0 +1,2 @@
+php bin/console doctrine:schema:update --force   : met a jours la base de données
+php bin/console cache:clear -e dev                 : Vide le cache courant de -e (dev/prod)
