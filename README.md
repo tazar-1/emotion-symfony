@@ -6,13 +6,13 @@ Emotion Symfony
 To use this starter project, you'll need the following things installed on your machine.
 
 2. [Lien](http://nodejs.org) - use the installer.
-3. [Lien](https://github.com/gulpjs/gulp) - `$ npm install -g gulp`
+3. [Lien](https://github.com/gulpjs/gulp) - `$ bliblablu`
 ```shell
-$ browser-sync start --server --files '.'
+$ bliblablu
 ```
 and in the other terminal :
 ```shell
-$ gulp sass
+$ bliblablu
 ```
 
 ## Local Installation
