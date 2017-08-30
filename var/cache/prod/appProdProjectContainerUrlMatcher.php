@@ -73,6 +73,16 @@ class appProdProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBundle\R
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'filtervehicule')), array (  '_controller' => 'EmotionBundle\\Controller\\DefaultController::FiltersAction',));
         }
 
+        // fidelites
+        if ('/fidelites' === $pathinfo) {
+            return array (  '_controller' => 'EmotionBundle\\Controller\\DefaultController::fidelitesAction',  '_route' => 'fidelites',);
+        }
+
+        // getLocations
+        if ('/mes_locations' === $pathinfo) {
+            return array (  '_controller' => 'EmotionBundle\\Controller\\DefaultController::MesLocationsAction',  '_route' => 'getLocations',);
+        }
+
         if (0 === strpos($pathinfo, '/login')) {
             // fos_user_security_login
             if ('/login' === $pathinfo) {

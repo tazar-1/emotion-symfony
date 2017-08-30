@@ -1,0 +1,206 @@
+{%  extends '::base.html.twig' %}
+{% block title %}{{ parent() }}
+{% endblock %}
+
+{% block stylesheets %}{{ parent() }}
+{% endblock %}
+
+{% block body %}{{ parent() }}
+
+    <div class="main">
+
+        <div class="fidelites">
+
+            <section class="section_turquoise header_my_account">
+                <div class="comp_buttons">
+                    <div class="btn_mid">
+                        <button class="btn_w">
+                            <a href="{{ path('fidelites') }}">Points fidélités</a>
+                        </button>
+                    </div>
+                    <div class="btn_mid">
+                        <button class="btn_w">
+                            <a href="{{ path('getLocations') }}">Mes locations</a>
+                        </button>
+                    </div>
+                    <div class="btn_mid">
+                        <button class="btn_w">
+                            <a href="{{ path('Compte') }}">Parametres</a>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <img src="{{ asset('framework/images/wave.svg') }}" alt="BLIBLABLU" class="wave">
+
+
+            <section class="section_white">
+                <h3>Moyens pour gagner des points de fidélités</h3>
+                <div class="border_bottom"></div>
+                <p class="text_entete">
+                    Maintenant, chaque fois que vous achetez, vous pouvez gagner des points de fidélités pouvant être échangés contre d'éventuels rabais et économies. Nos avantages spéciaux incluent des points de fidélités pour s'inscrire, gagner des points fidélités pour chaque euro dépensé, des points pour le parainage d'un ami, des jours avec récompense de points de fidélités et encore plus de surprises en cours de route.
+                </p>
+            </section>
+
+
+            <section class="section_gray_light mes_points">
+                <h3>Mes points fidélités</h3>
+                <div class="border_bottom"></div>
+                <div class="wrapper">
+                    <div class="footer_description">
+                        <div class="img_mes_points bounceIn_animate animated">
+                            <div class="number_text">
+                                <h1>2 000</h1>
+                                <p class="points">points</p>
+                                <div class="ico curve_line"></div>
+                                <p class="description">20€ de Coupon</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section_white gagner_points">
+                <h3>Moyens pour gagner des points de fidélités</h3>
+                <div class="border_bottom"></div>
+                <div class="wrapper bounceInLeft_animate animated">
+                    <div class="footer_description ">
+                        <div class="img_mes_points">
+                            <div class="number_text">
+                                <h1>1</h1>
+                                <p class="points">points</p>
+                            </div>
+                        </div>
+                        <p class="description">Pour chaque .</p>
+                    </div>
+                    <div class="footer_description ">
+                        <div class="img_mes_points">
+                            <div class="number_text">
+                                <h1>50</h1>
+                                <p class="points">points</p>
+                            </div>
+                        </div>
+                        <p class="description">Pour le partage sur les réseaux sociaux.</p>
+                    </div>
+                    <div class="footer_description">
+                        <div class="img_mes_points">
+                            <div class="number_text">
+                                <h1>100</h1>
+                                <p class="points">points</p>
+                            </div>
+                        </div>
+                        <p class="description">Pour aimer sur Facebook et suivre  sur instagram.</p>
+                    </div>
+                    <div class="footer_description ">
+                        <div class="img_mes_points">
+                            <div class="number_text">
+                                <h1>150</h1>
+                                <p class="points">points</p>
+                            </div>
+                        </div>
+                        <p class="description">Quand vous invitez un ami.</p>
+                    </div>
+                    <div class="footer_description ">
+                        <div class="img_mes_points">
+                            <div class="number_text">
+                                <h1>200</h1>
+                                <p class="points">points</p>
+                            </div>
+                        </div>
+                        <p class="description">Pour avoir créer un compte sur eMotion.</p>
+                    </div>
+                    <div class="footer_description">
+                        <div class="img_mes_points">
+                            <div class="number_text">
+                                <h1>250</h1>
+                                <p class="points">points</p>
+                            </div>
+                        </div>
+                        <p class="description">Pour ton anniversaire.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section_gray_light avantages_points">
+                <h3>Les avantages fidélités</h3>
+                <div class="border_bottom"></div>
+                <div class="wrapper bounceInRight_animate animated">
+                    <div class="footer_description ">
+                        <div class="img_mes_points">
+                            <div class="number_text">
+                                <h1>500</h1>
+                                <p class="points">points</p>
+                                <div class="ico curve_line"></div>
+                                <p class="description">5€ de Coupon</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer_description ">
+                        <div class="img_mes_points">
+                            <div class="number_text">
+                                <h1>1 000</h1>
+                                <p class="points">points</p>
+                                <div class="ico curve_line"></div>
+                                <p class="description">10€ de Coupon</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer_description">
+                        <div class="img_mes_points">
+                            <div class="number_text">
+                                <h1>2 000</h1>
+                                <p class="points">points</p>
+                                <div class="ico curve_line"></div>
+                                <p class="description">20€ de Coupon</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section_white inviter_points">
+                <h3>Inviter des amis</h3>
+                <div class="border_bottom"></div>
+                <div class="wrapper">
+                    <p class="text">
+                        Chez eMotion, nous croyons au partage. <br />
+                        Faites en profiter à vos amis ! <br />
+                        Invitez vos amis et vous serez instantanément récompensés par des points de fidélités.
+                    </p>
+                </div>
+                <div class="wrapper bounceIn_animate animated">
+                    <div class="footer_description ">
+                        <img src="{{ asset('framework/images/icons/new_comp.svg') }}" alt="Vos amis gagnent lorsqu'il ouvrent un nouveau compte">
+                        <h1>Votre ami gagne :<br />
+                        5€ de Coupon</h1>
+                        <p class="description">
+                            PLUS de 250 points lorsqu'ils ouvrent un nouveau compte eMotion
+                        </p>
+                    </div>
+                    <div class="footer_description ">
+                        <img src="{{ asset('framework/images/icons/new_comp.svg') }}" alt="Tu gagnes lorsque ton ami utilise le lien que tu lui as envoyé">
+                        <h1>
+                            Tu gagnes :<br />
+                            500 points
+                        </h1>
+                        <p class="description">
+                            Lorsque l'ami effectue son premier achat en utilisant le lien spécial que vous lui envoyez.
+                        </p>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <p class="text2">
+                        Les points seront automatiquement récompensés dans votre compte si votre ami a utilisé le lien envoyé à partir de votre compte et fait un premier achat admissible avec eMotion. 500 points seront automatiquement appliqués à votre compte si les stipulations sont respectées.
+                    </p>
+                </div>
+            </section>
+        </div>
+
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}{{ parent() }}
+{% endblock %}
+
+{% block footer %}{{ parent() }}
+{% endblock %}

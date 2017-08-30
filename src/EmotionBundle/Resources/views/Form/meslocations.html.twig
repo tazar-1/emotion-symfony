@@ -1,0 +1,176 @@
+{%  extends '::base.html.twig' %}
+{% block title %}{{ parent() }}
+{% endblock %}
+
+{% block stylesheets %}{{ parent() }}
+{% endblock %}
+
+{% block body %}{{ parent() }}
+
+    <div class="main">
+
+    <div class="locations">
+
+        <section class="section_turquoise header_my_account">
+            <div class="comp_buttons">
+                <div class="btn_mid">
+                    <button class="btn_w">
+                        <a href="{{ path('fidelites') }}">Points fidélités</a>
+                    </button>
+                </div>
+                <div class="btn_mid">
+                    <button class="btn_w">
+                        <a href="{{ path('getLocations') }}">Mes locations</a>
+                    </button>
+                </div>
+                <div class="btn_mid">
+                    <button class="btn_w">
+                        <a href="{{ path('Compte') }}">Parametres</a>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- <div class="diagonale"></div> -->
+        <img src="{{ asset('framework/images/wave.svg') }}" alt="BLIBLABLU" class="wave">
+
+
+
+
+        <section class="section_white">
+            <h3>Historiques des courses</h3>
+            <div class="border_bottom"></div>
+            <p class="text_entete">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fermentum, turpis sed accumsan varius, metus elit condimentum turpis, sed vehicula sem turpis id tortor.
+            </p>
+        </section>
+
+
+
+
+        <section class="section_white table_loc">
+            <table class="table table--bordered table--highlighted flush--bottom trips-table">
+                <thead>
+                    <tr>
+                        <th class="arrow"></th>
+                        <th>Date / Heure de début</th>
+                        <th>Date / Heure de fin</th>
+                        <th>Prix</th>
+                        <th>Véhicule</th>
+                    </tr>
+                </thead>
+                <tbody class="align--top">
+                    <tr data-toggle="collapse" data-target="" class="trip-expand__origin">
+                        <td class="arrow">
+                            <img src="{{ asset('framework/images/arrow_back_right.svg') }}" alt="BLIBLABLU" class="images">
+                        </td>
+                        <td>26/02/2017<span class="pipe"> /<span> 10:00 AM</td>
+                        <td>15/03/2017<span class="pipe"> /<span> 9:00 AM</td>
+                        <td>19,00&nbsp;€</td>
+                        <td class="no_visible">Car bio</td>
+                    </tr>
+                    <tr class="hard">
+                        <td colspan="8">
+                            <div class="collapse in" style="height: auto;">
+                                <div class="trip-expand">
+                                    <div class="flexbox">
+                                        <div class="flexbox__item one-third">
+                                            <div class="container_n_s_v">
+                                                <h1 class="fadeInUp_animate animated">
+                                                    <span>2017 </span>
+                                                    <span>
+                                                        FERRARI FERRARI
+                                                    </span>
+                                                </h1>
+                                                <div class="container_stars fadeInUp_animate animated">
+                                                    <fieldset class="rating">
+                                                        <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+                                                        <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+                                                        <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+                                                        <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+                                                        <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+                                                        <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+                                                        <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+                                                        <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+                                                        <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+                                                        <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+                                                    </fieldset>
+                                                </div>
+                                                <img src="{{ asset('framework/images/42i10i63.png') }}" alt="BLIBLABLU" class="images bounceInLeft_animate animated">
+                                            </div>
+                                            <div class="container_d_d">
+                                                <!-- <div class="diagonale"></div> -->
+                                                <img src="{{ asset('framework/images/wave.svg') }}" alt="BLIBLABLU" class="wave">
+                                                <div class="container_details">
+                                                    <div class="details">
+                                                        <div class="ico gear_lever_e"></div>
+                                                        <div class="border_line"></div>
+                                                        <div class="d_text">Automatic</div>
+                                                    </div>
+                                                    <div class="details">
+                                                        <div class="ico calendar_e"></div>
+                                                        <div class="border_line"></div>
+                                                        <div class="d_text">18 jours</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flexbox__item one-third fadeInUp_animate animated">
+                                            <h3>19,00&nbsp;€</h3>
+                                            <div class="border_bottom"></div>
+                                            <!-- <h6>Sunday, July 2, 2017 2:10 AM</h6> -->
+                                            <div class="container_d_h_a">
+                                                <div class="date_heure_adress">
+                                                    <h7>Date / Heure / Adress de début</h7>
+                                                    <h5>26/02/2017 / 10:00 AM</h5>
+                                                    <h6>7 Rue Adress, 78800 Ville, Pays</h6>
+                                                    <div class="btn_mid"><button class="btn_w"> <a href="">Editer</a> </button></div>
+                                                </div>
+                                                <div class="date_heure_adress">
+                                                    <h7>Date / Heure / Adress de fin</h7>
+                                                    <h5>15/03/2017 / 9:00 AM</h5>
+                                                    <h6>47T Rue Adress, 78800 Ville, Pays</h6>
+                                                    <div class="btn_mid"><button class="btn_w"> <a href="">Editer</a> </button></div>
+                                                </div>
+                                                <div class="border_bottom"></div>
+                                                <div class="container_details">
+                                                    <div class="details">
+                                                        <div class="ico timer_e"></div>
+                                                        <div class="d_text">431 H</div>
+                                                    </div>
+                                                    <div class="details">
+                                                        <div class="ico timer_e"></div>
+                                                        <div class="d_text">63km/h</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flexbox__item one-third">
+                                            <div class=" bounceInRight_animate animated">
+                                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15181.882424309493!2d7.398577103417309!3d48.74960386306794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4796a0f03bb744f1%3A0xc2d209588099504f!2sLicorne!5e0!3m2!1sfr!2sfr!4v1501856048965" width="400" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                            </div>
+                                            <div class="btn_mid">
+                                                <button class="btn_w">
+                                                    <div class="ico png_e"></div>
+                                                    <a href="">Facture</a>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}{{ parent() }}
+{% endblock %}
+
+{% block footer %}{{ parent() }}
+{% endblock %}

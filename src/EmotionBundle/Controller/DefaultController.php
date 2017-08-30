@@ -124,7 +124,7 @@ class DefaultController extends Controller
                 'TabVehicule' => $tabVehicule,
             ));
     }
-    
+
     public function PageScootersAction(){
         $tabVehicule = $this->getAllVehiculeAction();
         return $this->render('EmotionBundle:Form:scooters.html.twig', array(
@@ -215,7 +215,7 @@ class DefaultController extends Controller
             'form' => $form->createView()));
     }
 
-    public function MesLocationActions(){
+    public function MesLocationsAction(){
         return $this->render('EmotionBundle:Form:meslocations.html.twig');
     }
 
