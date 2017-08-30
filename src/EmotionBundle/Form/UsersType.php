@@ -28,20 +28,15 @@ class UsersType extends AbstractType
         $builder
             ->add('nom', TextType::class,array('required' => false))
             ->add('prenom', TextType::class,array('required' => false))
-            ->add('birthday', TextType::class,array('required' => false))
+            ->add('birthday', DateType::class, [
+                'required' => false,
+                'widget' => 'single_text',
+            ])
             ->add('adresse', TextType::class,array('required' => false))
             ->add('phone', TextType::class,array('required' => false))
             ->add('nb_permis', TextType::class,array('required' => false))
             ->add('email', TextType::class,array('required' => false))
-            ->add('password', TextType::class,array('required' => false))
-            ->add('pts_fidelite', IntegerType::class,array('required' => false))
-            ->add('validationToken', TextType::class,array('required' => false))
-            ->add('validate', BooleanType::class,array('required' => false))
-            ->add('permissions', BooleanType::class,array('required' => false))
-            ->add('created_at', DateType::class, [
-                'required' => false,
-                'widget' => 'single_text',
-            ]);
+            ->add('password', TextType::class,array('required' => false));
 
     }
 

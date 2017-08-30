@@ -1,0 +1,84 @@
+
+{%  extends '::base.html.twig' %}
+{% block title %}{{ parent() }}
+{% endblock %}
+
+{% block stylesheets %}{{ parent() }}
+{% endblock %}
+
+{% block body %}{{ parent() }}
+
+<div class="sig">
+    <article class="main-content">
+
+        <h4>Inscrivez-vous c'est gratuit !</h4>
+
+        <div class="form-group">
+            <div class="btn_mid">
+                <button class="btn_l_s"> <a href="log.html">Se connecter</a> </button>
+                <button class="btn_l_s"> <a href="sig.html">S'inscrire</a> </button>
+            </div>
+        </div>
+        {{ form_start(form) }}
+        {{ form_errors(form) }}
+
+
+
+        <div class="form-group">
+            <label>Prénom* :</label>
+            {{ form_errors(form.prenom) }}
+            {{ form_widget(form.prenom, {'attr': {'class': 'form-control'}}) }}
+
+        </div>
+
+        <div class="form-group">
+            <label>Nom* :</label>
+            {{ form_errors(form.nom) }}
+            {{ form_widget(form.nom, {'attr': {'class': 'form-control'}}) }}
+        </div>
+
+        <div class="form-group">
+            <label>E-mail :</label>
+            {{ form_errors(form.email) }}
+            {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
+        </div>
+
+        <div class="form-group">
+            <label>Mot de passe :</label>
+            {{ form_errors(form.password) }}
+            {{ form_widget(form.password, {'attr': {'class': 'form-control'}}) }}
+        </div>
+
+        <div class="form-group">
+            <label>Date de naissance :</label>
+            {{ form_errors(form.birthday) }}
+            {{ form_widget(form.birthday, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="form-group">
+            <label>Adresse Postal :</label>
+            {{ form_errors(form.adresse) }}
+            {{ form_widget(form.adresse, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="form-group">
+            <label>Numéros de téléhpone :</label>
+            {{ form_errors(form.phone) }}
+            {{ form_widget(form.phone, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="form-group">
+            <div class="btn_mid"><button class="btn_w"> <a href="">S'Inscrire</a> </button></div>
+        </div>
+
+    </article>
+
+    {{ form_end(form) }}
+
+</div>
+
+{% endblock %}
+
+{% block javascripts %}{{ parent() }}
+{% endblock %}
+
+{% block footer %}{{ parent() }}
+{% endblock %}
+

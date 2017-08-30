@@ -1,73 +1,68 @@
 <!DOCTYPE html>
 <html>
+
     <head>
-        <meta charset="UTF-8" />
         <title>{% block title %}eMotion - Le site de Location écologique de Voiture et Scooter{% endblock %}</title>
         {% block stylesheets %}
             <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-            <meta name=“description” content=“Du text du text et du text et encore tu text ?.“>
-            <meta property=“og:title” content=“eMotion”>
-            <meta property=“og:type” content=“website”>
-            <meta property=“og:url” content=“http://emotion.com“>
-
+            <meta name=“description” content=“Du text du text et du text.“>
             <link rel="icon" type="image/x-icon" href="{{ asset('framework/images/favicon.ico') }}" />
-
             <link rel="stylesheet" href="{{ asset('framework/css/styles.css') }}" type="text/css" media="all"/>
-
-            <script type="text/javascript" href="{{ asset('framework/js/jquery.js') }}"></script>
-
-            <script type="text/javascript"  href="{{ asset('framework/js/scroll.js') }}"></script>
-            <script type="text/javascript"  href="{{ asset('framework/js/nav_menu.js') }}"></script>
-            <script type="text/javascript"  href="{{ asset('framework/js/animation.js') }}"></script>
-
-    		<script type="text/javascript"  href="{{ asset('framework/js/app.js') }}"></script>
-
+            <script type="text/javascript" src="{{ asset('framework/js/jquery.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('framework/js/scroll.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('framework/js/nav_menu.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('framework/js/animation.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('framework/js/app.js') }}"></script>
         {% endblock %}
-
     </head>
+
     <body>
-        {% block body %}
-            <div id="nav">
-                <header class="header container">
-                    <div class="logo"></div>
-                    <nav class="top-nav">
-                        <ul>
-                            <li><a href="{{ path('home') }}" class="btn-border">Accueil</a></li>
-                            <li><a href="{{ path('about_us') }}" class="btn-border">Présentation</a></li>
-                            <li><a href="{{ path('Vehicules') }}" class="btn-border">Véhicules</a></li>
-                            {% if is_granted("IS_AUTHENTICATED_FULLY") %}
-                                <li><a href="{{ path('fos_user_profile_show') }}" class="btn-border">Mon compte</a></li>
-                                <li><a href="{{ path('fos_user_security_logout') }}" class="btn-log">Déconnexion</a></li>
-                                {% else %}
-                                    <li><a href="{{ path('fos_user_security_login') }}" class="btn-log">Connexion</a></li>
-                            {%endif%}
-                        </ul>
-                    </nav>
-                </header>
+    {% block body %}
+        <div id="nav">
+            <header class="header container">
+                <div class="logo"></div>
+                <!-- Menu on tablets and larger screens -->
+                <nav class="top-nav">
+                    <ul>
+                        <li><a href="{{ path('home') }}" class="btn-border">Accueil</a></li>
+                        <li><a href="{{ path('about_us') }}" class="btn-border">Présentation</a></li>
+                        <li><a href="{{ path('Vehicules') }}" class="btn-border">Véhicules</a></li>
+                        {% if is_granted("IS_AUTHENTICATED_FULLY") %}
+                            <li><a href="{{ path('Compte') }}" class="btn-border">Mon compte</a></li>
+                            <li><a href="{{ path('fos_user_security_logout') }}" class="btn-log">Déconnexion</a></li>
+                        {% else %}
+                            <li><a href="{{ path('fos_user_security_login') }}" class="btn-log">Connexion</a></li>
+                        {%endif%}
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+        <div id="container-menu">
+            <div id="toto" class="navToggle" onClick="appendClass()">
+                <div class="icon"></div>
             </div>
-            <div id="container-menu">
-    				<div id="toto" class="navToggle" onClick="appendClass()">
-    					<div class="icon"></div>
-    				</div>
-    				<div id="back-menu">
-    					<div id="menu">
-    						<ul>
-                                <li><a href="{{ path('home') }}" class="btn-border">Accueil</a></li>
-                                <li><a href="{{ path('about_us') }}" class="btn-border">Présentation</a></li>
-                                <li><a href="{{ path('Vehicules') }}" class="btn-border">Véhicules</a></li>
-                                {% if is_granted("IS_AUTHENTICATED_FULLY") %}
-                                    <li><a href="{{ path('fos_user_profile_show') }}" class="btn-border">Mon compte</a></li>
-                                    <li><a href="{{ path('fos_user_security_logout') }}" class="btn-log">Déconnexion</a></li>
-                                    {% else %}
-                                        <li><a href="{{ path('fos_user_security_login') }}" class="btn-log">Connexion</a></li>
-                                {%endif%}
-    						</ul>
-    					</div>
-    				</div>
-    		</div>
-        {% endblock %}
-        {% block javascripts %}{% endblock %}
+            <div id="back-menu">
+                <div id="menu">
+                    <ul>
+                        <li><a href="{{ path('home') }}" class="btn-border">Accueil</a></li>
+                        <li><a href="{{ path('about_us') }}" class="btn-border">Présentation</a></li>
+                        <li><a href="{{ path('Vehicules') }}" class="btn-border">Véhicules</a></li>
+                        {% if is_granted("IS_AUTHENTICATED_FULLY") %}
+                            <li><a href="{{ path('Compte') }}" class="btn-border">Mon compte</a></li>
+                            <li><a href="{{ path('fos_user_security_logout') }}" class="btn-log">Déconnexion</a></li>
+                        {% else %}
+                            <li><a href="{{ path('fos_user_security_login') }}" class="btn-log">Connexion</a></li>
+                        {%endif%}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    {% endblock %}
+    {% block javascripts %}{% endblock %}
     </body>
+
     <footer>
         {% block footer %}
             <footer id="footer_index">
@@ -118,4 +113,5 @@
         </footer>
         {% endblock %}
     </footer>
+
 </html>

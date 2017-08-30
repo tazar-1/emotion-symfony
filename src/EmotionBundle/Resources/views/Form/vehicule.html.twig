@@ -17,12 +17,12 @@
             <div class="comp_buttons">
                 <div class="btn_mid">
                     <button class="btn_w">
-                        <a href="cars.html">Voitures</a>
+                        <a href="{{ path('Vehicules') }}">Voitures</a>
                     </button>
                 </div>
                 <div class="btn_mid">
                     <button class="btn_w">
-                        <a href="scooters.html">Scooters</a>
+                        <a href="{{ path('Scooters') }}">Scooters</a>
                     </button>
                 </div>
             </div>
@@ -80,7 +80,7 @@
                         </div>
 
                         <div class="container_3">
-                             
+                            <div class="btn_mid"><button class="btn_w"> <a href="{{ path('setLocation', {'id': t.id }) }}" class="btn btn-default">Réserver</a> </button></div>
                         </div>
                     </div>
                 </aticle>

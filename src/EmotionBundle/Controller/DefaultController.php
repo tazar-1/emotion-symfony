@@ -5,6 +5,8 @@ namespace EmotionBundle\Controller;
 use EmotionBundle\Entity\Location;
 use EmotionBundle\Entity\Users;
 use EmotionBundle\Entity\Vehicule;
+use EmotionBundle\Form\LocationType;
+use EmotionBundle\Form\UsersType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Config\Definition\Exception\Exception;
 use Symfony\Component\HttpFoundation\Request;
@@ -122,6 +124,14 @@ class DefaultController extends Controller
                 'TabVehicule' => $tabVehicule,
             ));
     }
+    
+    public function PageScootersAction(){
+        $tabVehicule = $this->getAllVehiculeAction();
+        return $this->render('EmotionBundle:Form:scooters.html.twig', array(
+            'TabVehicule' => $tabVehicule,
+        ));
+    }
+
 
     public function FiltersAction($param,$param2,$param3,$param4){
         if(!$param && !$param2 && !$param3 && !$param4 ){
@@ -155,24 +165,62 @@ class DefaultController extends Controller
                 #return $this->redirectToRoute('emotion');
             }else{
                 throw new Exception('Une erreur est survenue lors de l\'envoie du formulaire');
+
             }
+        }
         return $this->render('EmotionBundle:Form:vehicule.html.twig', array(
             'form' => $form->createView()));
     }
-}
 
-    //BATOU
-    public function InsertLocationAction(Request $request){
-        $Location = new Location();
-        $Location->setIdVehicule(1);
-        #$Location->setDateLocation('');
-        #$Location->setRetourLocation('1');
-        $Location->setPrixLocation('50');
-        $Location->setIdUsers(1);
-         $em = $this->getDoctrine()->getManager();
-                $em->persist($Location);
+    public function InsertLocationAction(Request $request,$id){
+        if(!$id){
+            throw new Exception('Erreur lors de l\'insertion de de la location');
+        }
+        $datej = date('Y-m-d');
+
+        $em = $this->getDoctrine()->getManager();
+        $location = new Location();
+        $vehicule = $em->getRepository('EmotionBundle:Vehicule')->find($id);
+        $location->setIdVehicule($vehicule);
+        $location->setIdUsers($this->getUser());
+        $location->setDateLocation(new \DateTime());
+        $location->setRetourLocation(new \DateTime());
+        $location->setPrixLocation('100');
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($location);
+        $em->flush();
+        $this->get('session')->getFlashBag()->add(
+            'success',
+            'Votre Location a bien été prix en compte !'
+        );
+        return $this->redirectToRoute('home');
+    }
+    public function RegisterAction(Request $request)
+    {
+        $user = new Users();
+        $form = $this->createForm(UsersType::class,$user);
+        $form->handleRequest($request);
+        if($request->getMethod() == 'POST'){
+            if ($form->isSubmitted() && $form->isValid()) {
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($user);
                 $em->flush();
-        return $this->render('EmotionBundle:Form:add_location.html.twig');
+                return $this->redirectToRoute('Compte');
+            }else{
+                throw new Exception('Une erreur est survenue lors de l\'envoie du formulaire');
+
+            }
+        }
+        return $this->render('EmotionBundle:Form:register.html.twig', array(
+            'form' => $form->createView()));
     }
 
+    public function MesLocationActions(){
+        return $this->render('EmotionBundle:Form:meslocations.html.twig');
+    }
+
+    public function fidelitesAction()
+    {
+        return $this->render('EmotionBundle:Form:fidelites.html.twig');
+    }
 }

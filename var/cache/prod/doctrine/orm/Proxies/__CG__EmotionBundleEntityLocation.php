@@ -64,10 +64,10 @@ class Location extends \EmotionBundle\Entity\Location implements \Doctrine\ORM\P
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'EmotionBundle\\Entity\\Location' . "\0" . 'id', '' . "\0" . 'EmotionBundle\\Entity\\Location' . "\0" . 'date_location', '' . "\0" . 'EmotionBundle\\Entity\\Location' . "\0" . 'retour_location', '' . "\0" . 'EmotionBundle\\Entity\\Location' . "\0" . 'prix_location', '' . "\0" . 'EmotionBundle\\Entity\\Location' . "\0" . 'id_vehicule', '' . "\0" . 'EmotionBundle\\Entity\\Location' . "\0" . 'id_users'];
+            return ['__isInitialized__', '' . "\0" . 'EmotionBundle\\Entity\\Location' . "\0" . 'id', '' . "\0" . 'EmotionBundle\\Entity\\Location' . "\0" . 'date_location', '' . "\0" . 'EmotionBundle\\Entity\\Location' . "\0" . 'retour_location', '' . "\0" . 'EmotionBundle\\Entity\\Location' . "\0" . 'prix_location', '' . "\0" . 'EmotionBundle\\Entity\\Location' . "\0" . 'rendue', '' . "\0" . 'EmotionBundle\\Entity\\Location' . "\0" . 'id_vehicule', '' . "\0" . 'EmotionBundle\\Entity\\Location' . "\0" . 'id_users'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'EmotionBundle\\Entity\\Location' . "\0" . 'id', '' . "\0" . 'EmotionBundle\\Entity\\Location' . "\0" . 'date_location', '' . "\0" . 'EmotionBundle\\Entity\\Location' . "\0" . 'retour_location', '' . "\0" . 'EmotionBundle\\Entity\\Location' . "\0" . 'prix_location', '' . "\0" . 'EmotionBundle\\Entity\\Location' . "\0" . 'id_vehicule', '' . "\0" . 'EmotionBundle\\Entity\\Location' . "\0" . 'id_users'];
+        return ['__isInitialized__', '' . "\0" . 'EmotionBundle\\Entity\\Location' . "\0" . 'id', '' . "\0" . 'EmotionBundle\\Entity\\Location' . "\0" . 'date_location', '' . "\0" . 'EmotionBundle\\Entity\\Location' . "\0" . 'retour_location', '' . "\0" . 'EmotionBundle\\Entity\\Location' . "\0" . 'prix_location', '' . "\0" . 'EmotionBundle\\Entity\\Location' . "\0" . 'rendue', '' . "\0" . 'EmotionBundle\\Entity\\Location' . "\0" . 'id_vehicule', '' . "\0" . 'EmotionBundle\\Entity\\Location' . "\0" . 'id_users'];
     }
 
     /**

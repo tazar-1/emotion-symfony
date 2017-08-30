@@ -386,7 +386,7 @@ table {
       height: 50px;
       line-height: 64px;
       font-weight: 800;
-      background-image: url(../images/LOGO-EMOTION-defonse-01.svg);
+      background-image: url('../images/LOGO-EMOTION-defonse-01.svg');
       background-size: 180px 60px;
       background-repeat: no-repeat;
       background-position: 0 5px;
